@@ -4,7 +4,7 @@
   "description": "A platform game made with HTML5 and ran with Electron",
   "main": "out/main.js",
   "scripts": {
-    "test": "rm -rf out; mkdir out; cp -r src/view/index.html out; babel src -d out; electron .;"
+    "test": "del /s /q out && cp -r src/view/ out/view && babel src -d out && electron ."
   },
   "repository": {
     "type": "git",
