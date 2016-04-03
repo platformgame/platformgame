@@ -4,8 +4,8 @@
   "description": "A platform game made with HTML5 and ran with Electron",
   "main": "out/main.js",
   "scripts": {
-    "win32-test": "del /s /q out && cp -r src/view/ out && babel src -d out && electron .",
-    "unix-test": "rm -rf out; mkdir out; cp -r src/view/ out/; babel src -d out;"
+    "win32": "del /s /q out && cp -r src/view/ out && babel src -d out && electron .",
+    "unix": "rm -rf out; mkdir out; cp -r src/view/ out/; babel src -d out; electron ."
   },
   "repository": {
     "type": "git",
