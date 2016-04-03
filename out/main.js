@@ -13,6 +13,7 @@ _electron.app.on('window-all-closed', function () {
 _electron.app.on('ready', function () {
   mainWindow = new _electron.BrowserWindow({ width: 800, height: 600 });
   mainWindow.loadURL('file://' + __dirname + '/view/index.html');
+  mainWindow.setMenu(null);
 
   mainWindow.on('closed', function () {
     mainWindow = null;
