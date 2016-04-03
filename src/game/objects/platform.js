@@ -37,4 +37,8 @@ export class Platform {
   set length(l) {
     this.length = l;
   }
+  
+  draw() {
+    //Draw platform
+  }
 }
