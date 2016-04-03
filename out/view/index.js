@@ -1,6 +1,0 @@
-/*
-
-Export canvas
-
-*/
-"use strict";
