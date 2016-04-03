@@ -8,11 +8,11 @@ var inMenu = true;
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
                 if(inMenu){
-                    ctx.font = "120px monospace";
+                    ctx.font = "10vw monospace";
                     ctx.fillStyle = "white";
                     ctx.textAlign = "center";
                     ctx.fillText("Platform Game", canvas.width/2, canvas.height/2);
-                    ctx.font = "50px monospace";
+                    ctx.font = "3vw monospace";
                     ctx.fillText("Click to begin!", canvas.width/2, canvas.height/2+50)
                 }
         }
