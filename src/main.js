@@ -9,7 +9,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({width: 1280, height: 720, title: "Game"});
+  mainWindow = new BrowserWindow({width: 1280, height: 720, minWidth: 1280, minHeight: 720, title: "Game"});
   mainWindow.loadURL('file://' + __dirname + '/view/index.html');
   mainWindow.setMenu(null);
   
