@@ -1,7 +1,8 @@
-export class Character {
-  constructor(x, y) {
+export class Enemy {
+  constructor(x, y, type) {
     this.x = x;
     this.y = y;
+    this.type = type;
   }
   
   get x() {
@@ -12,6 +13,10 @@ export class Character {
     return this.y;
   }
   
+  get type() {
+    return this.type;
+  }
+  
   set x(xpos) {
     this.x = xpos;
   }
@@ -20,7 +25,11 @@ export class Character {
     this.y = ypos;
   }
   
+  set type(t) {
+    this.type = t;
+  }
+  
   draw() {
-    //Draw character
+    //Draw enemy
   }
 }
