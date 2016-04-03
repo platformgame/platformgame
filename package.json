@@ -1,0 +1,19 @@
+{
+  "name": "platformgame",
+  "version": "0.1.0",
+  "description": "A platform game made with HTML5 and ran with Electron",
+  "main": "out/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platformgame/platformgame.git"
+  },
+  "author": "platformgame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/platformgame/platformgame/issues"
+  },
+  "homepage": "https://github.com/platformgame/platformgame#readme"
+}
