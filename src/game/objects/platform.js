@@ -1,4 +1,4 @@
-export class Platform {
+export default class platform {
   constructor(x, y, height, length) {
     this.x = x;
     this.y = y;
@@ -38,7 +38,8 @@ export class Platform {
     this.length = l;
   }
   
-  draw() {
-    //Draw platform
+  draw(ctx) {
+    ctx.rect(this.x,this.y,this.length,this.height);
+    ctx.stroke();
   }
 }

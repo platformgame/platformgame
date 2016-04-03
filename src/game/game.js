@@ -1,3 +1,5 @@
+import platform from './platform';
+
 var canvas = document.getElementById("gameArea");
 var ctx = canvas.getContext("2d");
 var inMenu = true;
@@ -21,7 +23,9 @@ var inMenu = true;
 
 canvas.addEventListener("mousedown", function() {
     if(inMenu){
+        document.getElementById("gameArea").style.background = 'black';
         inMenu = false;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //var platform = new Platform(1, 50, 3, 50);
     }
 });
