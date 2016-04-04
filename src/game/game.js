@@ -1,4 +1,4 @@
-import platform from './platform';
+import platform from 'objects/platform';
 
 var canvas = document.getElementById("gameArea");
 var ctx = canvas.getContext("2d");
