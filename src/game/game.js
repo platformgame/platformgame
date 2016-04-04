@@ -1,4 +1,6 @@
-import platform from './objects/platform';
+import Platform from '../game/objects/platform';
+import Floor from '../game/objects/floor';
+import Enemy from '../game/objects/enemy'
 
 var canvas = document.getElementById("gameArea");
 var ctx = canvas.getContext("2d");
@@ -20,12 +22,25 @@ var inMenu = true;
         }
         resizeCanvas();
 })();
+var enemies = [];
+function loop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    Floor.draw(ctx);
+    enemies[enemies.length] = new Enemy(10, "Dwarf");
+    for (var i = 0, len = enemies.length; i < len; i++) {
+        if(enemies[i] != null){
+            enemies[i].draw(ctx);
+            if(enemies[i].x <= 0){
+                delete enemies[i];
+            }
+        }
+    }
+}
 
 canvas.addEventListener("mousedown", function() {
     if(inMenu){
         document.getElementById("gameArea").style.background = 'black';
         inMenu = false;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        //var platform = new Platform(1, 50, 3, 50);
+        setInterval(loop, 10);
     }
 });

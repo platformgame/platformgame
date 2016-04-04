@@ -1,35 +1,14 @@
-export class Enemy {
-  constructor(x, y, type) {
-    this.x = x;
-    this.y = y;
+export default class Enemy {
+  constructor(type) {
     this.type = type;
+    this.x = canvas.width;
   }
-  
-  get x() {
-    return this.x;
+  draw(ctx) {
+    ctx.beginPath();
+    ctx.rect(this.x, canvas.height - (canvas.height/15) - canvas.width/20, canvas.width/20, canvas.width/20);
+    ctx.fillStyle = "#E81515";
+    ctx.fill();
+    ctx.closePath();
+    this.x -= 5;
   }
-  
-  get y() {
-    return this.y;
-  }
-  
-  get type() {
-    return this.type;
-  }
-  
-  set x(xpos) {
-    this.x = xpos;
-  }
-  
-  set y(ypos) {
-    this.y = ypos;
-  }
-  
-  set type(t) {
-    this.type = t;
-  }
-  
-  draw() {
-    //Draw enemy
-  }
-}
+}  
